@@ -1,0 +1,23 @@
+{
+  "name": "img-gridify",
+  "version": "0.0.1",
+  "description": "Scss mixin for auto image grids",
+  "main": "app/index.html",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "author": "Kyle Gallagher",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "clean-css": "^4.2.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.10.0"
+  },
+  "dependencies": {}
+}

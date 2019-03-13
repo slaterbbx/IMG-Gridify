@@ -1,0 +1,5 @@
+# Dependency directory
+node_modules
+
+# VScode file for workspace
+img-gridify.code-workspace

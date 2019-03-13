@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$img-gridify-classname: img-gridify;
+$img-gridify-modifier: --gridify-cube;
+
+@mixin img-gridify($row-amount: 5, $column-amount: 12, $gutter-size: 10px, $total-width: 1000px, $row-height: 100px, $image-adjust-vert: 0, $bg-color: #b9b9b9, $image-url: '../img/deer.jpg') {
+
+    $image-vertical-shift-innitial: -$total-width;
+    $url-default: url('#{$image-url}');
+    
+    $column-width: ($total-width / $column-amount) - $gutter-size;
+
+    .#{$img-gridify-classname}-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .#{$img-gridify-classname}-bg {
+        padding: $gutter-size;
+        display: inline-block;
+        background-color: $bg-color;
+    }
+
+    [class^="#{$img-gridify-classname}-row"] {
+        height: $row-height;
+        list-style: none;
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: $gutter-size;
+        }
+    }
+
+    [class$="#{$img-gridify-modifier}"] {
+        background-image: $url-default;
+        background-size: $total-width;
+        width: $column-width;
+        height: $row-height;
+
+        @content;
+        
+        &:not(:last-child) {
+            margin-right: $gutter-size;
+        }
+    }
+
+    @for $i from 1 through $row-amount {
+
+        // .#{$img-gridify-classname}#{$i}#{$img-gridify-modifier} {}
+
+        // .#{$img-gridify-classname}#{$i}#{$img-gridify-modifier} {}
+
+        $image-shift-vertical: ((-$row-height + -$gutter-size) * ($i - 1))+$image-adjust-vert;
+
+        $row-counter: $i;
+
+        @for $i from 1 through $column-amount {
+
+            $image-shift-amount: (-$gutter-size + -$column-width) * ($i - 1);
+            $image-shift-horizontal: $image-vertical-shift-innitial + $image-shift-amount - $gutter-size;
+
+            .#{$img-gridify-classname}#{$row-counter}#{$img-gridify-modifier} {
+
+                &:nth-child(#{$i}) {
+                    background-position-x: $image-shift-horizontal;
+                    background-position-y: $image-shift-vertical;
+                }
+            }
+        }
+    }
+}
+
+// $row-amount, $column-amount, $gutter-size, $total-width, $row-height, $image-adjust-vert: 0, $image-url: '../img/deer.jpg'
+
+
+@include img-gridify(4, 12, 10px, 1200px, 100px, -90, #b9b9b9, '../img/cat.jpg' ){
+    &:hover {
+        transform: translate(-10px, -10px) scale(1.5);
+        box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.5);
+        transition: all .1s;
+    }
+}
