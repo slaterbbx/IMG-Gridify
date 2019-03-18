@@ -1,5 +1,7 @@
 # Pointlessly large scss mixin for the sake of ( I wonder )
 
+## Seriously though, this shows the power of scss mixins, check it out 🚀
+
 View live codepen version @ https://codepen.io/litonfiredesign/pen/zMpgMZ
 
 ## View locally
