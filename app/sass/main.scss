@@ -1,13 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+$color-black: #000;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body { // Just here for presentation on codepen
+	background-color: #FFF
+}
+
+.header{
+	text-align: center;
+	margin-top: 50px;
+	font-size: 36px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.sub-header{
+	text-align: center;
+	margin-top: 10px;
+	font-size: 23px;
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+
+	a{
+		text-decoration: none;
+		color: #5f5f5f;
+
+		&:hover{
+			color: black;
+		}
+	}
+}
+
+.img-gridify-wrapper { // Just here for presentation on codepen
+	margin-top: 30px;
+}
+
+// Created for fun, wanted to see what can be done with scss mixins, this turned out pretty awesome.
+// Use the mixin at the bottom to make changes to the grid
+// A UL is a row and the LI's make up the columns collectively
+// follow the html to create more rows / columns, the css is generated via the mixin
+// All calculations are in PX only ( for now )
+// You can change the grids gutter
+// Simply change the Image link to load in a new image
+// You can adjust the image vertically via the $adjust-image-vert 
+// The image uses 100% of the images width and fills the width you set the grid to
+// You can add in your animations to each block
+
 $img-gridify-classname: img-gridify;
 $img-gridify-modifier: --gridify-cube;
 
-@mixin img-gridify($row-amount: 5, $column-amount: 12, $gutter-size: 10px, $total-width: 1000px, $row-height: 100px, $image-adjust-vert: 0, $bg-color: #b9b9b9, $image-url: '../img/deer.jpg') {
+@mixin img-gridify($row-amount: 5, $column-amount: 12, $gutter-size: 10px, $total-width: 1000px,
+  $row-height: 100px, $image-adjust-vert: 0, $bg-color: #b9b9b9, $image-url: '../img/deer.jpg') {
 
     $image-vertical-shift-innitial: -$total-width;
     $url-default: url('#{$image-url}');
@@ -50,10 +98,6 @@ $img-gridify-modifier: --gridify-cube;
 
     @for $i from 1 through $row-amount {
 
-        // .#{$img-gridify-classname}#{$i}#{$img-gridify-modifier} {}
-
-        // .#{$img-gridify-classname}#{$i}#{$img-gridify-modifier} {}
-
         $image-shift-vertical: ((-$row-height + -$gutter-size) * ($i - 1))+$image-adjust-vert;
 
         $row-counter: $i;
@@ -74,13 +118,19 @@ $img-gridify-modifier: --gridify-cube;
     }
 }
 
-// $row-amount, $column-amount, $gutter-size, $total-width, $row-height, $image-adjust-vert: 0, $image-url: '../img/deer.jpg'
 
 
-@include img-gridify(4, 12, 10px, 1200px, 100px, -90, #b9b9b9, '../img/cat.jpg' ){
+// $row-amount, $column-amount, $gutter-size, $total-width, $row-height, $image-adjust-vert: 0, bg-color, $image-url: '../img/deer.jpg'
+
+@include img-gridify(7, 12, 10px, 1200px, 100px, -100px, #FFF, '../img/space.jpg') {
+    
+    box-shadow: 0 10px 10px rgba($color-black, .7);
+    transition: all .1s ease-in;
+  
     &:hover {
-        transform: translate(-10px, -10px) scale(1.5);
-        box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.5);
-        transition: all .1s;
+    transform: translate(-10px, -10px) scale(1.5) rotate(45deg);
+    box-shadow: 10px 10px 3px rgba($color-black, 0.5);
+    opacity: .9;
+    transition: all .1s ease-in;
     }
-}
+  }

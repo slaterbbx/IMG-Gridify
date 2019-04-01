@@ -1,7 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+body {
+  background-color: #FFF; }
+
+.header {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 36px;
+  font-family: 'Montserrat', sans-serif; }
+
+.sub-header {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 23px;
+  font-family: 'Open Sans', sans-serif;
+  color: black; }
+  .sub-header a {
+    text-decoration: none;
+    color: #5f5f5f; }
+    .sub-header a:hover {
+      color: black; }
+
+.img-gridify-wrapper {
+  margin-top: 30px; }
 
 .img-gridify-wrapper {
   display: flex;
@@ -10,7 +35,7 @@
 .img-gridify-bg {
   padding: 10px;
   display: inline-block;
-  background-color: #b9b9b9; }
+  background-color: #FFF; }
 
 [class^="img-gridify-row"] {
   height: 100px;
@@ -20,206 +45,353 @@
     margin-bottom: 10px; }
 
 [class$="--gridify-cube"] {
-  background-image: url("../img/cat.jpg");
+  background-image: url("../img/space.jpg");
   background-size: 1200px;
   width: 90px;
-  height: 100px; }
+  height: 100px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.7);
+  transition: all .1s ease-in; }
   [class$="--gridify-cube"]:hover {
-    -webkit-transform: translate(-10px, -10px) scale(1.5);
-            transform: translate(-10px, -10px) scale(1.5);
+    -webkit-transform: translate(-10px, -10px) scale(1.5) rotate(45deg);
+            transform: translate(-10px, -10px) scale(1.5) rotate(45deg);
     box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.5);
-    transition: all .1s; }
+    opacity: .9;
+    transition: all .1s ease-in; }
   [class$="--gridify-cube"]:not(:last-child) {
     margin-right: 10px; }
 
 .img-gridify1--gridify-cube:nth-child(1) {
   background-position-x: -1210px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(2) {
   background-position-x: -1310px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(3) {
   background-position-x: -1410px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(4) {
   background-position-x: -1510px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(5) {
   background-position-x: -1610px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(6) {
   background-position-x: -1710px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(7) {
   background-position-x: -1810px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(8) {
   background-position-x: -1910px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(9) {
   background-position-x: -2010px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(10) {
   background-position-x: -2110px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(11) {
   background-position-x: -2210px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify1--gridify-cube:nth-child(12) {
   background-position-x: -2310px;
-  background-position-y: -90px; }
+  background-position-y: -100px; }
 
 .img-gridify2--gridify-cube:nth-child(1) {
   background-position-x: -1210px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(2) {
   background-position-x: -1310px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(3) {
   background-position-x: -1410px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(4) {
   background-position-x: -1510px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(5) {
   background-position-x: -1610px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(6) {
   background-position-x: -1710px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(7) {
   background-position-x: -1810px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(8) {
   background-position-x: -1910px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(9) {
   background-position-x: -2010px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(10) {
   background-position-x: -2110px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(11) {
   background-position-x: -2210px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify2--gridify-cube:nth-child(12) {
   background-position-x: -2310px;
-  background-position-y: -200px; }
+  background-position-y: -210px; }
 
 .img-gridify3--gridify-cube:nth-child(1) {
   background-position-x: -1210px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(2) {
   background-position-x: -1310px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(3) {
   background-position-x: -1410px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(4) {
   background-position-x: -1510px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(5) {
   background-position-x: -1610px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(6) {
   background-position-x: -1710px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(7) {
   background-position-x: -1810px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(8) {
   background-position-x: -1910px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(9) {
   background-position-x: -2010px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(10) {
   background-position-x: -2110px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(11) {
   background-position-x: -2210px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify3--gridify-cube:nth-child(12) {
   background-position-x: -2310px;
-  background-position-y: -310px; }
+  background-position-y: -320px; }
 
 .img-gridify4--gridify-cube:nth-child(1) {
   background-position-x: -1210px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(2) {
   background-position-x: -1310px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(3) {
   background-position-x: -1410px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(4) {
   background-position-x: -1510px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(5) {
   background-position-x: -1610px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(6) {
   background-position-x: -1710px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(7) {
   background-position-x: -1810px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(8) {
   background-position-x: -1910px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(9) {
   background-position-x: -2010px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(10) {
   background-position-x: -2110px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(11) {
   background-position-x: -2210px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
 
 .img-gridify4--gridify-cube:nth-child(12) {
   background-position-x: -2310px;
-  background-position-y: -420px; }
+  background-position-y: -430px; }
+
+.img-gridify5--gridify-cube:nth-child(1) {
+  background-position-x: -1210px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(2) {
+  background-position-x: -1310px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(3) {
+  background-position-x: -1410px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(4) {
+  background-position-x: -1510px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(5) {
+  background-position-x: -1610px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(6) {
+  background-position-x: -1710px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(7) {
+  background-position-x: -1810px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(8) {
+  background-position-x: -1910px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(9) {
+  background-position-x: -2010px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(10) {
+  background-position-x: -2110px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(11) {
+  background-position-x: -2210px;
+  background-position-y: -540px; }
+
+.img-gridify5--gridify-cube:nth-child(12) {
+  background-position-x: -2310px;
+  background-position-y: -540px; }
+
+.img-gridify6--gridify-cube:nth-child(1) {
+  background-position-x: -1210px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(2) {
+  background-position-x: -1310px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(3) {
+  background-position-x: -1410px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(4) {
+  background-position-x: -1510px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(5) {
+  background-position-x: -1610px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(6) {
+  background-position-x: -1710px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(7) {
+  background-position-x: -1810px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(8) {
+  background-position-x: -1910px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(9) {
+  background-position-x: -2010px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(10) {
+  background-position-x: -2110px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(11) {
+  background-position-x: -2210px;
+  background-position-y: -650px; }
+
+.img-gridify6--gridify-cube:nth-child(12) {
+  background-position-x: -2310px;
+  background-position-y: -650px; }
+
+.img-gridify7--gridify-cube:nth-child(1) {
+  background-position-x: -1210px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(2) {
+  background-position-x: -1310px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(3) {
+  background-position-x: -1410px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(4) {
+  background-position-x: -1510px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(5) {
+  background-position-x: -1610px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(6) {
+  background-position-x: -1710px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(7) {
+  background-position-x: -1810px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(8) {
+  background-position-x: -1910px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(9) {
+  background-position-x: -2010px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(10) {
+  background-position-x: -2110px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(11) {
+  background-position-x: -2210px;
+  background-position-y: -760px; }
+
+.img-gridify7--gridify-cube:nth-child(12) {
+  background-position-x: -2310px;
+  background-position-y: -760px; }
