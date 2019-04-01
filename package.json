@@ -1,6 +1,6 @@
 {
   "name": "img-gridify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Scss mixin for auto image grids",
   "main": "app/index.html",
   "scripts": {
