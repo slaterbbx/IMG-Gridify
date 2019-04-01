@@ -19,7 +19,7 @@ The example shows visually how the mixin calculates the correct image location f
 
 ## Boilerplates
 **Full Stack React Dev:**
-https://github.com/slaterbbx/Fullstackinator
+https://github.com/slaterbbx/Fullstackinator<br>
 **Stand WebDev-Sandbox with Webpack & Babel:**
 https://github.com/slaterbbx/WebDev-SandBox
 
